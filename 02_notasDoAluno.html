@@ -6,12 +6,27 @@
     Identifique a maior nota, a menor nota e também calcule a média obtida pelo aluno.
     */
 
-    //Entrada
+     const notasAluno = [7, 5, 9, 8];
+    let maiorNota = notasAluno[0];
+    let menorNota = notasAluno[0];
+    let soma = 0;
 
+    // Processamento
+    for (let nota of notasAluno) {
+        if (nota > maiorNota) {
+            maiorNota = nota;
+        }
+        if (nota < menorNota) {
+            menorNota = nota;
+        }
+        soma += nota;
+    }
 
-    //Processamento
+    const media = soma / notasAluno.length;
 
-
-    //Saída
-
+    // Saída
+    document.write(`a média ${media}`);
+    document.write(`a menor nota é ${menorNota}`);
+    document.write(`a maior nota e ${maiorNota}`);
+</script>
 </script>

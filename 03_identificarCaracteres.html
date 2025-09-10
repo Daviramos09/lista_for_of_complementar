@@ -4,13 +4,25 @@
     Peça para o usuário informar uma palavra. Após, identifique a quantidade de vogais e de consoantes que existem na palavra informada pelo usuário.
     Apresente as quantidades no final do programa.
     */
+ // Entrada
+    const palavraInformada = prompt(`Informe uma palavra`);
 
-    //Entrada
+    // Processamento
+    let vogais = 0;
+    let consoantes = 0;
+    const palavra = palavraInformada.toLowerCase();
 
+    for (let letra of palavra) {
+        if (letra >= 'a' && letra <= 'z') { 
+            if ('aeiou'.includes(letra)) {
+                vogais++;
+            } else {
+                consoantes++;
+            }
+        }
+    }
 
-    //Processamento
-
-
-    //Saída
+    // Saída
+    document.write(`Vogais: ${vogais}\nConsoantes: ${consoantes}`);
 
 </script>
