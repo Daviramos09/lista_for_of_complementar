@@ -9,11 +9,23 @@
 
     //Entrada
     let cidades = ["Porto Alegre", "Curitiba", "Florianópolis", "Joinville", "Blumenau", "Gramado", "Santa Maria", "Londrina", "Itajaí"];
-
-
+    let sc = [];
+    let pr = [];
+    let rs = [];
     //Processamento
-
-
+    for (cidade of cidades) {
+        const estadoP = prompt(`a cidade ${cidade} pertence a qual estado (sc) (rs) (pr)`).toLowerCase;
+        if (estadoP === "sc") {
+            sc.push(cidade);
+        }
+        if(estadoP === "pr") {
+            pr.push(cidade);
+        }
+        if(estadoP === "rs") {
+            rs.push(cidade);
+        }
+    }
+  
     //Saída
 
 </script>

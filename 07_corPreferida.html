@@ -9,10 +9,18 @@
 
     //Entrada
     let cores = ["Branco", "Azul", "Marrom", "Cinza", "Verde", "Amarelo", "Vermelho", "Preto"];
-
+    let Gosta = [];
+    let naoGosta = [];
     //Processamento
-
-
+   for(cor of cores) {
+    const pergunta = prompt(`você gosta da cor ${cor} sim ou não`);
+    if(pergunta === "sim") {
+        Gosta.push(cor);
+    }
+    if(pergunta === "não" || pergunta === "nao"); {
+        naoGosta.push(cor);
+    }
+   }
     //Saída
-
+document.write(`a lista original é ${cores} <br> e a lista de cores que o usuario gosta é ${Gosta}`);
 </script>

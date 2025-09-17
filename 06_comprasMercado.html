@@ -8,15 +8,17 @@
 
     //Entrada
     let lista = ["A", "E", 2, 4.8, "CINQUENTA", "Araquari", 80, 10, 3.2];
-
-
+    let soma = 0
     //Processamento
-    let numero = [];
-for (elemento of lista) {
-    if(number(elemento))
-    numero.push(elemento)
-}
+    let numeros = []
+   for (let elemento of lista) {
+        if (typeof elemento === "number") {
+            numeros.push(elemento);
+            soma += elemento;
+        }
+    }
 
+    let media = soma / numeros.length
     //Saída
-    document.write(`a lista completa é ${lista} <br> e a lista de numero é ${numero}`)
+    document.write(`a lista completa é ${lista} <br> e a lista de numero é ${numeros} <br> e a soma é ${soma}`)
 </script>

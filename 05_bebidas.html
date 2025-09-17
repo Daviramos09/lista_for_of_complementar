@@ -8,10 +8,19 @@
 
     //Entrada
     let bebidas = ["Cerveja", "Vinho", "Suco Natural", "Tequila", "Água", "Refrigerante", "Vodka"];
-
+    let bebidasAlcool = [];
+    let bebidaSemAlcool = [];
     //Processamento
-
+    for (bebida of bebidas) {
+        const possui = prompt(`a bebida possui ${bebida} possui alcool sim ou não`).toLowerCase()
+        if(possui === "sim") {
+            bebidasAlcool.push(bebida)
+        }
+        if (possui === "não" || possui === "nao") {
+            bebidaSemAlcool.push(bebida)
+        }
+    }
 
     //Saída
-
+ document.write(`a lista é ${bebidas} <br> e as bebidas permitidas para menores de 18 anos é ${bebidaSemAlcool}`);
 </script>

@@ -9,10 +9,15 @@
 
     //Entrada
     let nomes = ["Hilário", "Rafaela", "José", "Bárbara", "Fábio", "Júlia"];
-
+    let atualiazada = [];
     //Processamento
-    
+  for (let nome of nomes) {
+    nome = nome.replace("á","a");
+    nome = nome.replace("é","e");
+    nome = nome.replace("ú","u");
+    atualiazada.push(nome);
+  }
 
     //Saída
-
+  document.write(`a lista de nomes é ${nomes} <br> e a lista atualizada é ${atualiazada}`);
 </script>
